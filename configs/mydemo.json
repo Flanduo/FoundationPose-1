@@ -1,0 +1,8 @@
+{
+    "mesh_file": "/home/wyf/Projects/FoundationPose/demo_data/module_tube_rack/mesh/tube_rack.obj",
+    "test_scene_dir": "/home/wyf/Projects/FoundationPose/demo_data/module_tube_rack",
+    "est_refine_iter": 10,
+    "track_refine_iter": 8,
+    "debug": 2,
+    "debug_dir": "debug/tube_rack"
+}

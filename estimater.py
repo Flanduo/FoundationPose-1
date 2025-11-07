@@ -170,6 +170,13 @@ class FoundationPose:
       else:
         self.glctx = glctx
 
+
+    # 确保 depth 是 2D 灰度图
+    if depth.ndim == 3:
+      depth = depth[..., 0]
+    elif depth.ndim == 4:
+        depth = depth.squeeze(0).squeeze(-1)
+
     depth = erode_depth(depth, radius=2, device='cuda')
     depth = bilateral_filter_depth(depth, radius=2, device='cuda')
 
